@@ -1,0 +1,44 @@
+--- a/config.def.h
++++ b/config.def.h
+@@ -4,1 +4,1 @@
+-#define MOD Mod4Mask
++#define MOD Mod1Mask
+
+--- a/config.def.h
++++ b/config.def.h
+@@ -6,8 +6,4 @@
+-const char* menu[]    = {"dmenu_run",      0};
++const char* menu[]    = {"rofi", "-show",      0};
+-const char* term[]    = {"st",             0};
++const char* term[]    = {"urxvt",             0};
++const char* lock[]    = {"i3lock", "--nofork", "-o", "-f", "-s", "400", "-r", "60", 0};
+-const char* scrot[]   = {"scr",            0};
++const char* scrot[]   = {"", 0};
+-const char* briup[]   = {"bri", "10", "+", 0};
+-const char* bridown[] = {"bri", "10", "-", 0};
+-const char* voldown[] = {"amixer", "sset", "Master", "5%-",         0};
+-const char* volup[]   = {"amixer", "sset", "Master", "5%+",         0};
+-const char* volmute[] = {"amixer", "sset", "Master", "toggle",      0};
+
+--- a/config.def.h
++++ b/config.def.h
+@@ -16,2 +16,2 @@
+ static struct key keys[] = {
+-    {MOD,      XK_q,   win_kill,   {0}},
++    {MOD|ShiftMask,      XK_q,   win_kill,   {0}},
+
+--- a/config.def.h
++++ b/config.def.h
+@@ -24,10 +2,4 @@
+     {MOD, XK_d,      run, {.com = menu}},
+-    {MOD, XK_w,      run, {.com = colors}},
+-    {MOD, XK_p,      run, {.com = scrot}},
++    {MOD|ShiftMask, XK_o,      run, {.com = scrot}},
++    {MOD|ShiftMask, XK_p,      run, {.com = lock}},
+     {MOD, XK_Return, run, {.com = term}},
+-
+-    {0,   XF86XK_AudioLowerVolume,  run, {.com = voldown}},
+-    {0,   XF86XK_AudioRaiseVolume,  run, {.com = volup}},
+-    {0,   XF86XK_AudioMute,         run, {.com = volmute}},
+-    {0,   XF86XK_MonBrightnessUp,   run, {.com = briup}},
+-    {0,   XF86XK_MonBrightnessDown, run, {.com = bridown}},
