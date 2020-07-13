@@ -14,7 +14,3 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 S="${WORKDIR}/cpp-utf8-${PV}"
-
-src_compile() {
-  emake DESTDIR=${D} install
-}
