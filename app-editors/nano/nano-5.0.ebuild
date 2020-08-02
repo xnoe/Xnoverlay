@@ -34,7 +34,6 @@ BDEPEND="
 "
 
 PATCHES=(
-  "${FILESDIR}/${PN}-4.8-justify_keystroke_crash_fix.patch"
   "${FILESDIR}/shinonome.patch"
 )
 
