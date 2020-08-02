@@ -1,8 +1,9 @@
 --- a/src/rcfile.c
 +++ b/src/rcfile.c
-@@ -1371,2 +1371,25 @@
-     free(nanorc);
-     nanorc = NULL;
+@@ -1709,6 +1709,28 @@
+ 
+ 	free(nanorc);
+ 	nanorc = NULL;
 +  printf(
 +"                                _ ____ \r\n"
 +"                          ,:´.:.:.:.:.｀ヽ､\r\n"
@@ -18,11 +19,14 @@
 +"                       |::ゝ              ｲ::/:ﾉ\r\n"
 +"                       |:/:` ＞  ｀_´ ＜:|:/／\r\n"
 +"                    ,∠      /   ＼_／   〉｀丶､\r\n"
-+"                  . ⌒ヽヽ   ＼   /^ヽ  /	ヽ   \r\n"
-+"               , ´ _＿」」_|_＿      ＿_    /    `	  \r\n"
++"                  . ⌒ヽヽ   ＼   /^ヽ  /       ヽ   \r\n"    
++"               , ´ _＿」」_|_＿      ＿_    /    `       \r\n"   
 +"              /  ´               ￣      ｀V      〉     \r\n"
 +"             ′                           ､ ﾉ)   /|    \r\n"
 +"               ､ _＿_ _   -‐   ´￣｀ー＜ _ノレ` |        \r\n"
 +"                        | |                   |   |  \r\n"
 +"               Press Enter to continue starting nano.\r\n");
 +while (getchar() != '\r');
+ }
+-
+ #endif /* ENABLE_NANORC */
