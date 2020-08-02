@@ -1,6 +1,6 @@
 --- a/src/rcfile.c
 +++ b/src/rcfile.c
-@@ -1371,2 +1371,26 @@
+@@ -1371,2 +1371,25 @@
      free(nanorc);
      nanorc = NULL;
 +  printf(
